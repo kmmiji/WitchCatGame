@@ -12,6 +12,7 @@
 		1A0237DC2A95083100827354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0237DB2A95083100827354 /* Assets.xcassets */; };
 		1A0237DF2A95083100827354 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0237DE2A95083100827354 /* Preview Assets.xcassets */; };
 		1A0237EF2A950BB200827354 /* 3D_GameScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 1A0237EE2A950BB200827354 /* 3D_GameScene.scn */; };
+		1A0238002A9516C000827354 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0237FF2A9516C000827354 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +22,9 @@
 		1A0237DB2A95083100827354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0237DE2A95083100827354 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A0237EE2A950BB200827354 /* 3D_GameScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = 3D_GameScene.scn; path = "Preview Content/3D_GameScene.scn"; sourceTree = "<group>"; };
-		1A0237FD2A95129E00827354 /* witchCat2.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; name = witchCat2.usdc; path = ../../../BlendEssets/witchCat2.usdc; sourceTree = "<group>"; };
+		1A0237FD2A95129E00827354 /* WitchCat.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; name = WitchCat.usdc; path = ../../../BlendEssets/WitchCat.usdc; sourceTree = "<group>"; };
 		1A0237FE2A95141F00827354 /* Crow.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Crow.usdc; path = ../../../BlendEssets/Crow.usdc; sourceTree = "<group>"; };
+		1A0237FF2A9516C000827354 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				1A0237FE2A95141F00827354 /* Crow.usdc */,
-				1A0237FD2A95129E00827354 /* witchCat2.usdc */,
+				1A0237FD2A95129E00827354 /* WitchCat.usdc */,
 				1A0237D72A95083000827354 /* WitchCatGameApp.swift */,
 				1A0237D92A95083000827354 /* ContentView.swift */,
+				1A0237FF2A9516C000827354 /* GameScene.swift */,
 				1A0237DB2A95083100827354 /* Assets.xcassets */,
 				1A0237EE2A950BB200827354 /* 3D_GameScene.scn */,
 				1A0237DD2A95083100827354 /* Preview Content */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0238002A9516C000827354 /* GameScene.swift in Sources */,
 				1A0237DA2A95083000827354 /* ContentView.swift in Sources */,
 				1A0237D82A95083000827354 /* WitchCatGameApp.swift in Sources */,
 			);

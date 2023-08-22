@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import SceneKit
 
 struct ContentView: View {
+    
+    let scene = GameScene(make: true)
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        SceneView(scene:scene, options: .autoenablesDefaultLighting)
+            .ignoresSafeArea()
+            .onTapGesture {
+                scene.cat.physicsBody?.velocity.y = 4
+            }
     }
 }
 
