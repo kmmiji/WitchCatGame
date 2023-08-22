@@ -11,7 +11,7 @@ import SwiftUI
 struct WitchCatGameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
         }
     }
 }

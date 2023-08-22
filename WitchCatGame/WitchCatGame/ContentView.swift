@@ -9,15 +9,46 @@ import SwiftUI
 import SceneKit
 
 struct ContentView: View {
-    
-    let scene = GameScene(make: true)
+   
+    @StateObject var scene = GameScene(make: true)
     
     var body: some View {
-        SceneView(scene:scene, options: .autoenablesDefaultLighting)
-            .ignoresSafeArea()
-            .onTapGesture {
-                scene.cat.physicsBody?.velocity.y = 4
+        NavigationView {
+            
+            ZStack {
+                SceneView(scene:scene, options: .autoenablesDefaultLighting)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        scene.cat.physicsBody?.velocity.y = 4
+                    }
+                
+                if scene.gameIsOver == true {
+                    NavigationLink {
+                        StartView()
+                    } label: {
+                        VStack {
+                            
+                            Spacer()
+                                .frame(height: 150)
+                            
+                            Text("Back")
+                                .font(.system(size: 53, design: .rounded))
+                                .font(.title)
+                                .foregroundColor(.red)
+                                .frame(width: 600, height: 50)
+                                .background(.white)
+                                .clipShape(Capsule())
+                            
+                        }
+                    }
+                
+                }
+            
             }
+        }
+        .navigationViewStyle(.stack)
+        .navigationBarBackButtonHidden(true)
+        
     }
 }
 
