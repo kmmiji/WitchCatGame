@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct WitchCatGameApp: App {
+    
     var body: some Scene {
         WindowGroup {
             StartView()

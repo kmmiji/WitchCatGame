@@ -19,7 +19,7 @@ struct ContentView: View {
                 SceneView(scene:scene, options: .autoenablesDefaultLighting)
                     .ignoresSafeArea()
                     .onTapGesture {
-                        scene.cat.physicsBody?.velocity.y = 4
+                        scene.cat.physicsBody?.velocity.y = 3
                     }
                 
                 if scene.gameIsOver == true {

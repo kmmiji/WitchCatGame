@@ -25,7 +25,9 @@ class GameScene: SCNScene, SCNPhysicsContactDelegate, ObservableObject {
     convenience init(make: Bool) {
         self.init()
         
-        background.contents = UIColor.blue //배경컬러 나중에 바꾸기
+        if let backgroundImage = UIImage(named: "배경") {
+                    background.contents = backgroundImage
+                }
         physicsWorld.gravity = SCNVector3(x: 0, y: -5, z: 0)
         physicsWorld.contactDelegate = self
         
@@ -40,7 +42,7 @@ class GameScene: SCNScene, SCNPhysicsContactDelegate, ObservableObject {
         
         witchCat()
     }
-    
+
     func witchCat() {
         let scene = SCNScene(named: "3D_GameScene.scn")!
         cat = scene.rootNode.childNode(withName: "WitchCat", recursively: true)!
@@ -48,10 +50,10 @@ class GameScene: SCNScene, SCNPhysicsContactDelegate, ObservableObject {
         cat.physicsBody?.categoryBitMask = bitMasks.cat.rawValue
         cat.physicsBody?.contactTestBitMask = bitMasks.enemy.rawValue
         cat.physicsBody?.collisionBitMask = bitMasks.enemy.rawValue
-        
+
         rootNode.addChildNode(cat)
     }
-    
+
     @objc func makeEnemy() {
         let randomNumber = Float.random(in: -4...5)
         
@@ -65,7 +67,7 @@ class GameScene: SCNScene, SCNPhysicsContactDelegate, ObservableObject {
         
         enemyCrow.position = SCNVector3(x: 20, y: randomNumber, z: 0)
         
-        let moveAction = SCNAction.move(to: SCNVector3(x: -25, y: randomNumber, z: 0), duration: 5)
+        let moveAction = SCNAction.move(to: SCNVector3(x: -20, y: randomNumber, z: 0), duration: 5)
         
         enemyCrow.runAction(moveAction)
         rootNode.addChildNode(enemyCrow)
